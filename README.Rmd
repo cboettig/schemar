@@ -41,6 +41,8 @@ x <- Thing(url = "http://schema.org")
 write_jsonld(x, "example.json")
 ```
 
+The main purpose of the package is to take advantage of tab completion and built-in documentation.  For instance, typing `schemar::P` and hitting tab, we see a list of all possible object types (classes) starting with `P`.  Typing a full class, such as `schema::Place(` and hitting tab, we see a list of possible properties for `Place`. The manual entry, `?Place`, shows the definitions for each of these properties, along with there expected types.  
+
 ------
 
 Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md).

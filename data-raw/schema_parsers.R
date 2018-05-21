@@ -1,3 +1,5 @@
+library(dplyr)
+library(readr)
 
 schema_defs <- list(classes = readr::read_tsv("data-raw/classes.tsv"),
                     properties = readr::read_tsv("data-raw/properties.tsv"))
@@ -28,7 +30,10 @@ function_constructor <- function(type) {
 
   ## fixme: return NULL if df$property is length zero
   args <- df$property
-  local_classes <- schema_defs$classes[schema_defs$classes$class %in% type, ]
+  if(length(args) == 0)
+    return(NULL)
+
+  local_classes <- schema_defs$classes[schema_defs$classes$class %in% type, ][1,]
 
   docs <-
     paste0(
