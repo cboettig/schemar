@@ -1,0 +1,10 @@
+Package: schemar
+Version: 0.0.0.9000
+Title: Create Structured Data Using the Schema.org Vocabulary
+Description: What the package does (one paragraph).
+Authors@R: person("First", "Last", , "first.last@example.com", c("aut", "cre"))
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+ByteCompile: true
+Suggests: covr
