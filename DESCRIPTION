@@ -2,9 +2,19 @@ Package: schemar
 Version: 0.0.0.9000
 Title: Create Structured Data Using the Schema.org Vocabulary
 Description: What the package does (one paragraph).
-Authors@R: person("First", "Last", , "first.last@example.com", c("aut", "cre"))
+Authors@R: person("Carl", "Boettiger", 
+                  email = "cboettig@gmail.com", 
+                  role = c("aut", "cre", "cph"),
+                  comment=c(ORCID = "0000-0002-1642-628X"))
+URL: https://github.com/cboettig/schemar
+BugReports: https://github.com/cboettig/schemar/issues
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 ByteCompile: true
-Suggests: covr
+Suggests: 
+    covr,
+    testthat
+Imports: 
+    jsonlite
+RoxygenNote: 6.0.1.9000
