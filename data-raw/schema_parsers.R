@@ -4,6 +4,8 @@ library(readr)
 schema_defs <- list(classes = readr::read_tsv("data-raw/classes.tsv"),
                     properties = readr::read_tsv("data-raw/properties.tsv"))
 
+devtools::use_data(schema_defs, internal = TRUE, overwrite = TRUE)
+
 get_schema <- function(object_type,
                        classes = schema_defs$classes,
                        properties = schema_defs$properties){

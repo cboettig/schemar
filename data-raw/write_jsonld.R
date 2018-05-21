@@ -50,3 +50,20 @@ write_jsonld <-  function(x, path, context = "http://schema.org",
                        ...)
 }
 
+
+#' get schema
+#'
+#' @importFrom dplyr filter arrange
+#' @param object_type name of an object type in Schema.org
+#' @export
+#'
+get_schema <- function(object_type){
+  classes <- schema_defs$classes
+  properties <- schema_defs$properties
+  inheritance <- dplyr::filter(classes, class %in% object_type)[1,]
+  if(all(is.na(inheritance)))
+    inheritance <- object_type
+  df <- dplyr::filter(properties, class %in% inheritance)
+  dplyr::arrange(df, class)
+}
+
