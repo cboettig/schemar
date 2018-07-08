@@ -15882,7 +15882,7 @@
           "@id": "schema:Organization"
         },
         {
-          "@id": "schema:Person"
+            "@id": "schema:Person"
         }
       ],
       "schema:rangeIncludes": {
